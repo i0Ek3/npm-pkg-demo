@@ -55,13 +55,28 @@ $ vim package.json // modify your version
 $ npm publish
 ```
 
-
 ## Issues
 
-### 1. If you cannot publish your package and show you error message like this: 
-`403 Forbidden - PUT https://registry.npmjs.org/pkg_name - Forbidden 
-403 In most cases, you or one of your dependencies are requesting 
-403 a package version that is forbidden by your security policy, or
-403 on a server you do not have access to.`
+> 1. If you cannot publish your package and show you error message like this:
+
+```console
+npm ERR! code 403 
+npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/pkg_name - Forbidden 
+npm ERR! 403 In most cases, you or one of your dependencies are requesting 
+npm ERR! 403 a package version that is forbidden by your security policy, or
+npm ERR! 403 on a server you do not have access to.
+```
 
 Login your npm account and validate your email in same browser, and then publish again, you will fix that issue.
+
+> 2. If you cannot publish your package and show you error message like this:
+
+```console
+npm ERR! code E403
+npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/libtool - Package name too similar to existing packages; try renaming your package to '@i0ek3/libtool' and publishing with 'npm publish --access=public' instead
+npm ERR! 403 In most cases, you or one of your dependencies are requesting
+npm ERR! 403 a package version that is forbidden by your security policy, or
+npm ERR! 403 on a server you do not have access to.
+```
+
+Just rename your package and `npm publish` again.
